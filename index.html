@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="winter">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Documentation Template</title>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css"/>
+  <link rel="stylesheet" href="/assets/document-style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+  <!-- <script>
+    window.location.replace("/documents/introduction"); // Replace this if you don't want to redirect to the introduction page
+  </script> -->
+
+  <!-- Module import -->
+  <script type="module" src="/components/navbar.js"></script>
+  <script type="module" src="/components/sidebar.js"></script>
+
+  <!-- Drawer -->
+  <div class="drawer lg:drawer-open sticky">
+    <input id="my-drawer-3" type="checkbox" class="drawer-toggle" />
+    <div class="drawer-content flex flex-col">
+      <navbar-component></navbar-component>
+
+      <script type="text/javascript" src="https://unpkg.com/showdown/dist/showdown.min.js"></script>
+      <script>
+        (async () => {
+          const response = await fetch('README.md'); // Fetch the content of the markdown file, in main page, default is set to README
+          const converter = new showdown.Converter();
+          const text = await response.text();
+          const html = converter.makeHtml(text);
+          document.getElementById('document-section').innerHTML = html;
+        })();
+      </script>
+      <div id="document-section" class="prose lg:prose-xl document lg:px-10"></div>
+
+    </div>
+    
+    <div class="drawer-side">
+      <label for="my-drawer-3" aria-label="close sidebar" class="drawer-overlay"></label>
+      
+      <sidebar-component class="h-full"></sidebar-component>
+
+    </div>
+  </div>
+</body>
+
+</html>
