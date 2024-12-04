@@ -24,7 +24,7 @@ class Sidebar extends LitElement {
             </ul>
           </details>
         </li>
-        <li><a href="/documents/changelog">Change log</a></li>
+        <li><a href="/documents/changelog/index.html">Change log</a></li>
       </ul>
     `
   }
