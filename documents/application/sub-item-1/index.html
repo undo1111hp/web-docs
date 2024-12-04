@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Documentation Template</title>
+  <title>Sub Item</title>
   <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css"/>
   <link rel="stylesheet" href="/assets/document-style.css">
   <script src="https://cdn.tailwindcss.com"></script>
@@ -24,7 +24,7 @@
       <script type="text/javascript" src="https://unpkg.com/showdown/dist/showdown.min.js"></script>
       <script>
         (async () => {
-          const response = await fetch('content.md'); // Fetch the content of the markdown file
+          const response = await fetch('./content.md'); // Fetch the content of the markdown file
           const converter = new showdown.Converter();
           const text = await response.text();
           const html = converter.makeHtml(text);
