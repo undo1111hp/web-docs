@@ -12,7 +12,7 @@ class Sidebar extends LitElement {
   render() {
     return html`
       <ul class="menu bg-base-200 min-h-full w-80 p-4">
-        <a class="btn btn-primary text-base-100 text-xl font-semibold w-fit mb-1" href="/">AnyDocument</a>
+        <a class="btn btn-primary text-base-100 text-xl font-semibold w-fit mb-1" href="/">MEO Docs</a>
         <!-- Sidebar content here -->
         <li><a href="/documents/introduction/index.html">Introduction</a></li>
         <li>
@@ -21,6 +21,7 @@ class Sidebar extends LitElement {
             <ul>
               <li><a href="/documents/application/sub-item-1/index.html">Sub item 1</a></li>
               <li><a href="/documents/application/example/index.html">Example: MEO</a></li>
+              <li><a href="/documents/application/thingEduBlocks/index.html">ThingEduDesktop</a></li>
             </ul>
           </details>
         </li>

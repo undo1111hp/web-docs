@@ -14,7 +14,7 @@ class Navbar extends LitElement {
       <!-- Navbar -->
       <div class="navbar bg-primary text-base-200 lg:hidden ">
         <div class="flex-1">
-          <a class="text-2xl font-semibold py-3" href="/">AnyDocument</a>
+          <a class="text-2xl font-semibold py-3" href="/">MEO Docs</a>
         </div>
         
         <div class="flex-none lg:hidden">
